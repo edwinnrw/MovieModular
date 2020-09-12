@@ -1,0 +1,8 @@
+include ':features:movie_favorite'
+include ':features:movies_detail'
+include ':features:movies'
+include ':data'
+include ':features'
+include ':core'
+include ':app'
+rootProject.name = "MovieModular"

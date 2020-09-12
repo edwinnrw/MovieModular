@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: "$rootDir/common.gradle"
+
+android {
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    defaultConfig {
+        buildConfigField("String", "API_KEY", '"9351b653885866a95fcef04c4f0c7426"')
+        buildConfigField("String", "MOVIE_URL", '"https://api.themoviedb.org/"')
+        buildConfigField("String", "IMAGE_URL", '"https://image.tmdb.org/t/p/w500"')
+    }
+
+}
+dependencies {
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    api 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+    api 'androidx.navigation:navigation-ui-ktx:2.3.0'
+
+}

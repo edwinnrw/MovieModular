@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply from: "$rootDir/common.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(':core')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation project(':data')
+
+}

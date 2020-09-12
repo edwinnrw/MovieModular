@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_detail_movie"
+    app:startDestination="@id/activity_detail_movie">
+    <activity
+        android:id="@+id/activity_detail_movie"
+        android:name="com.edwinnurwansyah.movies_detail.presentation.DetailMovieActivity"
+        tools:layout="@layout/activity_detail_movie">
+        <argument
+            android:name="movie_id"
+            app:argType="integer" />
+        <argument
+            android:name="voteAverage"
+            app:argType="string" />
+        <argument
+            android:name="poster"
+            app:argType="string" />
+        <argument
+            android:name="backdrop"
+            app:argType="string" />
+        <argument
+            android:name="overview"
+            app:argType="string" />
+
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <deepLink app:uri="moviemodular://feature_detail_movie/{movie_id}/{voteAverage}/{overview}/{date}/{title},{backdrop},{poster}" />
+
+    </activity>
+
+</navigation>
